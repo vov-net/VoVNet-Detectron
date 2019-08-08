@@ -90,3 +90,7 @@ python tools/test_net.py --config-file "configs/vovnet/e2e_faster_rcnn_V_39_FPN_
  - [ ] Larger models
  - [ ] Multi-scale training & test
 
+## Related projects
+
+- [VoVNet-Classification](https://github.com/vov-net/VoVNet-Classification)
+- [VoVNet-FCOS](https://github.com/vov-net/VoVNet-FCOS)
