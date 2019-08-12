@@ -74,6 +74,7 @@ def build_resnet_fpn_p3p7_backbone(cfg):
 @registry.BACKBONES.register("V-27-FPN")
 @registry.BACKBONES.register("V-39-FPN")
 @registry.BACKBONES.register("V-57-FPN")
+@registry.BACKBONES.register("V-75-FPN")
 @registry.BACKBONES.register("V-93-FPN")
 def build_vovnet_fpn_backbone(cfg):
     body = vovnet.VoVNet(cfg)
@@ -99,8 +100,9 @@ def build_vovnet_fpn_backbone(cfg):
 @registry.BACKBONES.register("V-27-FPN-RETINANET")
 @registry.BACKBONES.register("V-39-FPN-RETINANET")
 @registry.BACKBONES.register("V-57-FPN-RETINANET")
+@registry.BACKBONES.register("V-75-FPN-RETINANET")
 @registry.BACKBONES.register("V-93-FPN-RETINANET")
-def build_vovnet_fpn_backbone(cfg):
+def build_vovnet_fpn__p3p7_backbone(cfg):
     body = vovnet.VoVNet(cfg)
     in_channels_stage = cfg.MODEL.VOVNET.OUT_CHANNELS
     out_channels = cfg.MODEL.VOVNET.BACKBONE_OUT_CHANNELS

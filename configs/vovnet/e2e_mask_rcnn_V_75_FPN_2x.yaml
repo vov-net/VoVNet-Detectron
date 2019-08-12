@@ -1,8 +1,8 @@
 MODEL:
   META_ARCHITECTURE: "GeneralizedRCNN"
-  WEIGHT: "https://dl.dropbox.com/s/b826phjle6kbamu/vovnet57_statedict_norm.pth?dl=1"
+  WEIGHT: "https://dl.dropbox.com/s/ve1h1ol2ge7yfta/vovnet75_statedict_norm.pth.tar?dl=1"
   BACKBONE:
-    CONV_BODY: "V-57-FPN"
+    CONV_BODY: "V-75-FPN"
     FREEZE_CONV_BODY_AT: 0
   RPN:
     USE_FPN: True
@@ -39,4 +39,4 @@ SOLVER:
   WARMUP_FACTOR : 0.01
   STEPS: (120000, 160000)
   MAX_ITER: 180000
-OUTPUT_DIR : 'checkpoints/MRCN-V-57-FPN-2x'
+OUTPUT_DIR : 'checkpoints/MRCN-V-75-FPN-2x'

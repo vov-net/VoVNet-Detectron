@@ -28,6 +28,12 @@ VoVNet57FPNStagesTo5 = {
     'block_per_stage': [1, 1, 4, 3]
 }
 
+VoVNet75FPNStagesTo5 = {
+    'config_stage_ch': [128, 160, 192, 224],
+    'config_concat_ch': [256, 512, 768, 1024],
+    'layer_per_block': 5,
+    'block_per_stage': [1, 2, 6, 3]
+}
 
 VoVNet93FPNStagesTo5 = {
     'config_stage_ch': [128, 160, 192, 224],
@@ -40,10 +46,12 @@ _STAGE_SPECS = Registry({
     "V-27-FPN": VoVNet27FPNStagesTo5,
     "V-39-FPN": VoVNet39FPNStagesTo5,
     "V-57-FPN": VoVNet57FPNStagesTo5,
+    "V-75-FPN": VoVNet75FPNStagesTo5,
     "V-93-FPN": VoVNet93FPNStagesTo5,
     "V-27-FPN-RETINANET": VoVNet27FPNStagesTo5,
     "V-39-FPN-RETINANET": VoVNet39FPNStagesTo5,
     "V-57-FPN-RETINANET": VoVNet57FPNStagesTo5,
+    "V-75-FPN-RETINANET": VoVNet75FPNStagesTo5,
     "V-93-FPN-RETINANET": VoVNet93FPNStagesTo5
 })
 

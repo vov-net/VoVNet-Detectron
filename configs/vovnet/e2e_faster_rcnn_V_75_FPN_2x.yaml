@@ -1,8 +1,8 @@
 MODEL:
   META_ARCHITECTURE: "GeneralizedRCNN"
-  WEIGHT: "https://dl.dropbox.com/s/b826phjle6kbamu/vovnet57_statedict_norm.pth?dl=1"
+  WEIGHT: "https://dl.dropbox.com/s/ve1h1ol2ge7yfta/vovnet75_statedict_norm.pth.tar?dl=1"
   BACKBONE:
-    CONV_BODY: "V-57-FPN"
+    CONV_BODY: "V-75-FPN"
     FREEZE_CONV_BODY_AT: 0
   RPN:
     USE_FPN: True
@@ -19,15 +19,6 @@ MODEL:
     POOLER_SAMPLING_RATIO: 2
     FEATURE_EXTRACTOR: "FPN2MLPFeatureExtractor"
     PREDICTOR: "FPNPredictor"
-  ROI_MASK_HEAD:
-    POOLER_SCALES: (0.25, 0.125, 0.0625, 0.03125)
-    FEATURE_EXTRACTOR: "MaskRCNNFPNFeatureExtractor"
-    PREDICTOR: "MaskRCNNC4Predictor"
-    POOLER_RESOLUTION: 14
-    POOLER_SAMPLING_RATIO: 2
-    RESOLUTION: 28
-    SHARE_BOX_FEATURE_EXTRACTOR: False
-  MASK_ON: True
 DATASETS:
   TRAIN: ("coco_2014_train", "coco_2014_valminusminival")
   TEST: ("coco_2014_minival",)
@@ -36,7 +27,7 @@ DATALOADER:
 SOLVER:
   BASE_LR: 0.02
   WEIGHT_DECAY: 0.0001
-  WARMUP_FACTOR : 0.01
+  WARMUP_FACTOR: 0.01
   STEPS: (120000, 160000)
   MAX_ITER: 180000
-OUTPUT_DIR : 'checkpoints/MRCN-V-57-FPN-2x'
+OUTPUT_DIR : 'checkpoints/FRCN-V-75-FPN-2x'
